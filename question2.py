@@ -15,7 +15,7 @@ def student_grade(n):
         # if statement to check for any grade in the grade_original arrY is < 38
         if n < 38:
             # adding the grade as it is to the grade_final array as it < 38 and no rounding is needed
-            grade_final.append(n) 
+            grade_final += [n] 
         
         # else statement to round the grades in the grade_original array is >= 38
         else:
@@ -31,12 +31,12 @@ def student_grade(n):
              # if statement to make sure the new variable has a difference of <3
             if new < 3:
                 # append the rounded grade to the rounded_grade array 
-                grade_final.append(rounded_grade)
+                grade_final += [rounded_grade]
             # else statement for the new variable with a difference of >=3 
             else:
                 # addind the grade as it is to the grade_final array as 
                 # the new variable has a difference of >= 3  
-                grade_final.append(n)
+                grade_final += [n]
                 
     # return the grade_final array 
     return grade_final
