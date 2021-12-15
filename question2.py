@@ -4,7 +4,8 @@
 # import the math library
 import math
 
-# create the student_grade(grade) function to store the students grades
+# create the student_grade(n) function to store the students grades 
+# where n is the grade
 def student_grade(n):
     # create the  grade_final array to store the final grades after rounding 
     grade_final = []
