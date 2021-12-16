@@ -32,7 +32,7 @@ def encrypt(text_var,key_var):
     # return the e_mess variable 
     return e_mess
 
-# call the encrypt function 
+# create the eted variable to call the encrypt function 
 eted = encrypt(text_var,key_var)
  
 
@@ -41,17 +41,17 @@ eted = encrypt(text_var,key_var)
 def decrypt(eted,key_var):
     # create the stuff variable and set it to 0
     stuff = 0
-    # create the d_mess variable to store the decrypted messagea
+    # create the d_mess variable to store the decrypted message
     d_mess = ''
     
     # if statement to check when both the length of the text and key are even 
     if len(eted) % 2 == 0 and key_var % 2 == 0: 
-        # create the mach variable to divide the lenght of the eted variable by the key_var 
+        # create the mach variable to divide the length of the eted variable by the key_var 
         mech = len(eted)//key_var 
         
         # while loop to loop through the stuff variable when less than the mech
         while stuff < mech:
-            # for loop to loop through the lenght of the text 
+            # for loop to loop through the length of the text 
             # starting from stuff and take mech steps each time
             for good in range(stuff,len(eted),mech):
                 # increment the d_mess variable with eted[good]
@@ -59,9 +59,9 @@ def decrypt(eted,key_var):
             # increment the stuff variable 
             stuff = stuff + 1 
             
-    # if statement to check when the lenght of the text is even but the key is odd 
+    # if statement to check when the length of the text is even but the key is odd 
     if len(eted) % 2 == 0 and key_var % 2 != 0:
-        # update the mech variable to divide the lenght of the eted variable by the key_var
+        # update the mech variable to divide the length of the eted variable by the key_var
         mech = len(eted)//key_var 
         
         # while loop to loop through the stuff variable when less than the mech 
@@ -81,7 +81,7 @@ def decrypt(eted,key_var):
                 # break the loop 
                 break
                 
-            # update the mech variable to divide the lenght of the eted variable by the key_var
+            # update the mech variable to divide the length  of the eted variable by the key_var
             mech = len(eted)//key_var 
             # increment the stuff variable 
             stuff = stuff + 1 
@@ -91,10 +91,12 @@ def decrypt(eted,key_var):
     # return the d_mess variable
     return d_mess
 
-# call the decrypt function 
+# create the dect variable to call the decrypt function 
 dect = decrypt(eted,key_var)
 
+# create the start variable to measure the time 
 start = time.process_time()
+# test cases 
 print("Text: " + text_var + " & Key: " + str(key_var))
 print("Encrypted message: "+ eted + ". Decrypted message: " + dect)
 print("With the key " + str(key_var) + ". The time taken is " + str(time.process_time() - start)+"secs" )
